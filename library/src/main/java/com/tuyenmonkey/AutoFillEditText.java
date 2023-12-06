@@ -77,7 +77,9 @@ public class AutoFillEditText extends AppCompatEditText {
       return;
     }
 
-    textFillStrategy.apply(text.toString());
+    if(textFillStrategy != null) {
+      textFillStrategy.apply(text.toString());
+    }
   }
 
   public void addSuggestions(List<String> suggestions) {
